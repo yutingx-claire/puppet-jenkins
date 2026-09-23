@@ -5,11 +5,6 @@ require 'spec_helper'
 describe 'jenkins::cli::exec' do
   let(:title) { 'foo' }
 
-  # genai-contribution (skill: rspec-unit-tests) - PLEASE DO NOT REMOVE (used for AI contribution metrics)
-  def sensitive(value)
-    RSpec::Puppet::Sensitive.new(value)
-  end
-
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
